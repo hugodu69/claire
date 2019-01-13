@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link href="./style.css" type="text/css" rel="stylesheet">
+		<script type="./javascript" src="script.js" defer></script>
+	</head>
+	<body>
+		<header id="navbar">
+			<input id="check" type="checkbox">
+			<div id="bande">
+				<img id="logo" src="./includes/logorouge.png" alt="logo_claire_laplace">
+				<div id="menu">
+					<a href="#">actualités</a>
+					<a href="#">bio</a>
+					<a href="#">saison</a>
+					<a href="#">agenda</a>
+					<a href="#">vidéo & audio</a>
+					<a href="#">photos</a>
+					<a href="#">contact</a>
+				</div>
+			</div>
+			<div id="name">
+				<p>claire laplace</p>
+				<p>piano</p>
+			</div>
+		</header>
+		<main>
+		</main>
+		<script>
+			window.onscroll = function() {navbarReduction()};
+			var navbar = document.getElementById("check");
+
+			function navbarReduction() {
+				if (window.pageYOffset >= 50)
+					{navbar.checked = true;}
+				else {navbar.checked = false;}
+			}
+		</script>
+	</body>
+</html>
