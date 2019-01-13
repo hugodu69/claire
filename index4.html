@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link href="./style4.css" type="text/css" rel="stylesheet">
+		<script type="./javascript" src="script.js" defer></script>
+	</head>
+	<body>
+		<header id="navbar">
+			<img id="back" src="./includes/photos/piano2.jpg" alt="claire">
+			<input id="check" type="checkbox">
+			<div id="bande">
+				<a id="logo" href="./index.html"><img src="./includes/logo.png" alt="logo_claire_laplace"></a>
+				<div id="menu">
+					<a href="./index2.html">actualités</a>
+					<a href="./index3.html">bio</a>
+					<a href="./index4.html">saison</a>
+					<a href="./index5.html">agenda</a>
+					<a href="./index6.html">vidéo & audio</a>
+					<a href="./index7.html">photos</a>
+					<a href="./index8.html">contact</a>
+				</div>
+			</div>
+			<div id="name">
+				<p>claire laplace</p>
+				<p>piano</p>
+			</div>
+		</header>
+		<main>
+		</main>
+		<script>
+			window.onscroll = function() {navbarReduction()};
+			var navbar = document.getElementById("check");
+			var back = document.getElementById("back");
+
+			function navbarReduction() {
+				back.style.top = window.pageYOffset / 2 + 'px';
+				if (window.pageYOffset >= 50)
+					{navbar.checked = true;}
+				else {navbar.checked = false;}
+			}
+		</script>
+	</body>
+</html>
