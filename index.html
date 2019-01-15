@@ -9,34 +9,62 @@
 	</head>
 	<body>
 		<header id="navbar">
-			<input id="check" type="checkbox">
-			<div id="bande">
-				<a id="logo" href="./index.html"><img src="./includes/logo.png" alt="logo_claire_laplace"></a>
-				<div id="menu">
-					<a href="./index2.html">actualités</a>
-					<a href="./index3.html">bio</a>
-					<a href="./index4.html">saison</a>
-					<a href="./index5.html">agenda</a>
-					<a href="./index6.html">vidéo & audio</a>
-					<a href="./index7.html">photos</a>
-					<a href="./index8.html">contact</a>
+			<img id="back" src="./includes/photos/piano4.jpg" alt="claire">
+			<div id="bande" class="toScroll">
+				<a id="logo" class="toScroll" href="./index.html"><img src="./includes/logo.png" alt="logo claire laplace"></a>
+				<div id="menu" class="toScroll">
+					<a class="toScroll" href="./index2.html">actualités</a>
+					<a class="toScroll" href="./index3.html">bio</a>
+					<a class="toScroll" href="./index4.html">saison</a>
+					<a class="toScroll" href="./index5.html">agenda</a>
+					<a class="toScroll" href="./index6.html">vidéo & audio</a>
+					<a class="toScroll" href="./index7.html">photos</a>
+					<a class="toScroll" href="./index8.html">contact</a>
 				</div>
 			</div>
-			<div id="name">
-				<p>claire laplace</p>
-				<p>piano</p>
+			<div id="name" class="toScroll">
+				<h1>claire laplace</h1>
+				<h1>piano</h1>
 			</div>
 		</header>
-		<main>
-		</main>
+		<div id="page">
+			<aside>
+				<article>
+					<h3>la vie de claire et sa vision de la musique</h3>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque a odio quis egestas. Fusce at eros odio. Praesent accumsan non est a lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin volutpat fringilla vulputate. Mauris placerat dolor non risus vestibulum laoreet. Aenean sollicitudin scelerisque felis, a egestas dui. Aenean magna dolor, efficitur vel mi a, ultricies imperdiet lectus. Duis eget sodales eros, ornare eleifend ex. Proin nec arcu augue. Quisque vitae arcu commodo, consectetur ipsum vitae, sollicitudin orci. Maecenas vestibulum sem non eros egestas fermentum.</p>
+					<p>Maecenas orci lacus, dapibus sed elementum non, semper sit amet lacus. Nulla a dui sed quam varius bibendum non nec neque. Aenean ornare sit amet sem vel dignissim. Mauris nisi sapien, porttitor ut auctor non, sodales ut purus. Sed mattis turpis ipsum, sit amet tincidunt magna volutpat in. Suspendisse condimentum ipsum vitae nibh dignissim, ut varius nulla tincidunt. Proin lobortis nulla id odio finibus auctor. Duis condimentum enim purus. Etiam efficitur mi nulla, et consectetur sapien venenatis sed. Maecenas non hendrerit arcu, eget aliquam lorem. Nullam a aliquam urna. Fusce bibendum mauris sit amet gravida cursus. Fusce bibendum libero sed nunc eleifend, eget ornare turpis mollis.</p>
+					<a href="#">bio</a>
+				</article>
+			</aside>
+			<main>
+				<article>
+					<h2>prochain concert</h2>
+					<p>blablabla</p>
+					<p>blablablablablabla</p>
+					<p>blablablablablablablablabla</p>
+					<a href="#">saison</a>
+				</article>
+				<article>
+					<h2>prochain concert</h2>
+					<p>blablabla</p>
+					<p>blablablablablabla</p>
+					<p>blablablablablablablablabla</p>
+					<a href="#">album</a>
+				</article>
+			</main>
+		</div>
+		<footer>
+		</footer>
 		<script>
 			window.onscroll = function() {navbarReduction()};
-			var navbar = document.getElementById("check");
+			var scroll = document.getElementsByClassName("toScroll");
+			var back = document.getElementById("back");
 
 			function navbarReduction() {
+				back.style.top = window.pageYOffset / 2 + 'px';
 				if (window.pageYOffset >= 50)
-					{navbar.checked = true;}
-				else {navbar.checked = false;}
+					{for (let i of scroll) {i.classList.add("scroll")};}
+				else {for (let i of scroll) {i.classList.remove("scroll")};}
 			}
 		</script>
 	</body>
