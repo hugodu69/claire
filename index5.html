@@ -69,12 +69,10 @@
 			var bande = document.getElementById("bande");
 
 			function navbarReduction() {
-				back.style.top = window.pageYOffset / 2 + 'px';
+				back.style.top = window.pageYOffset / 1.5 + 'px';
 				if (window.pageYOffset < 300) {
-					bande.style.height = 200 - window.pageYOffset / 2 + 'px';
 					bande.style.backgroundColor = 'transparent';}
 				else {
-					bande.style.height = '50px';
 					bande.style.backgroundColor = 'rgba(26, 40, 42, 0.9)';}
 				if (window.pageYOffset >= 50) {
 					for (let i of scroll) {i.classList.add("scroll")};}
