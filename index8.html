@@ -4,53 +4,66 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title></title>
-		<link href="./style.css" type="text/css" rel="stylesheet">
+		<link href="./style8.css" type="text/css" rel="stylesheet">
 		<script type="./javascript" src="script.js" defer></script>
 	</head>
 	<body>
-		<header id="navbar">
-			<img id="back" src="./includes/photos/piano4.jpg" alt="claire">
-			<input id="check" type="checkbox">
-			<div id="bande" class="toScroll">
-				<a id="logo" class="toScroll" href="./index.html"><img src="./includes/logo.png" alt="logo claire laplace"></a>
-				<div id="menu" class="toScroll">
-					<a class="toScroll" href="./index2.html">actualités</a>
-					<a class="toScroll" href="./index3.html">bio</a>
-					<a class="toScroll" href="./index4.html">saison</a>
-					<a class="toScroll" href="./index5.html">agenda</a>
-					<a class="toScroll" href="./index6.html">vidéo & audio</a>
-					<a class="toScroll" href="./index7.html">photos</a>
-					<a class="toScroll" href="./index8.html">contact</a>
-				</div>
-			</div>
-			<div id="name" class="toScroll">
-				<p>claire laplace</p>
-				<p>piano</p>
+		<header id="nav">
+			<a id="logo" href="./index.html"><img src="./includes/logo.png" alt="logo claire laplace"></a>
+			<div id="menu">
+				<a href="./index2.html">actualités</a>
+				<a href="./index3.html">bio</a>
+				<a href="./index4.html">saison</a>
+				<a href="./index5.html">agenda</a>
+				<a href="./index6.html">vidéo & audio</a>
+				<a href="./index7.html">photos</a>
+				<a href="./index8.html">contact</a>
 			</div>
 		</header>
-		<main>
-			<aside>
-				<h2>la vie de claire et sa vision de la musique</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque a odio quis egestas. Fusce at eros odio. Praesent accumsan non est a lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin volutpat fringilla vulputate. Mauris placerat dolor non risus vestibulum laoreet. Aenean sollicitudin scelerisque felis, a egestas dui. Aenean magna dolor, efficitur vel mi a, ultricies imperdiet lectus. Duis eget sodales eros, ornare eleifend ex. Proin nec arcu augue. Quisque vitae arcu commodo, consectetur ipsum vitae, sollicitudin orci. Maecenas vestibulum sem non eros egestas fermentum.</p>
-				<p>Maecenas orci lacus, dapibus sed elementum non, semper sit amet lacus. Nulla a dui sed quam varius bibendum non nec neque. Aenean ornare sit amet sem vel dignissim. Mauris nisi sapien, porttitor ut auctor non, sodales ut purus. Sed mattis turpis ipsum, sit amet tincidunt magna volutpat in. Suspendisse condimentum ipsum vitae nibh dignissim, ut varius nulla tincidunt. Proin lobortis nulla id odio finibus auctor. Duis condimentum enim purus. Etiam efficitur mi nulla, et consectetur sapien venenatis sed. Maecenas non hendrerit arcu, eget aliquam lorem. Nullam a aliquam urna. Fusce bibendum mauris sit amet gravida cursus. Fusce bibendum libero sed nunc eleifend, eget ornare turpis mollis.</p>
-			</aside>
-			<article>
-				<h2>prochain concert</h2>
-				<p>blablabla</p>
-				<p>blablablablablabla</p>
-				<p>blablablablablablablablabla</p>
-			</article>
-		</main>
+		<div id="img">
+			<img id="back" src="./includes/photos/piano4.jpg" alt="claire">
+			<div id="name">
+				<h1>claire laplace</h1>
+				<h1>piano</h1>
+			</div>
+		</div>
+		<article>
+			<h2>claire laplace pianiste</h2>
+			<p>petit texte d'introduction sur la musique et ou sur toi qui donne aux gens le ton de ce a quoi s'attendre avec toi je pense, ou quelque chose comme ca, peut-etre un poeme sur la musique sinon ou une citation ? puis quand on clique sur le liens en bas ca emmene vers ta bio complete sur une autre page</p>
+			<a href="#">bio</a>
+		</article>
+		<article>
+			<h2>prochain concert</h2>
+			<h3>9 mars : « Mélodies », avec Noé Chapolard - Baryton</h3>
+			<p>Que chanter dans un salon au tournant des XIXe et XXe siècles ? Des Mélodies bien sûr !</p>
+			<h3>Fauré - Mélodies</h3>
+			<h3>Vaughan Williams - Songs of Travel</h3>
+			<a href="#">saison</a>
+		</article>
+		<article>
+			<h2>derniers événements</h2>
+			<h3>blablabla</h3>
+			<p>master-classe de piano forte</p>
+			<p>le piano forte c'est la vie</p>
+			<img src="./includes/pianoforte.jpg" alt="piano forte">
+			<a href="#">agenda</a>
+		</article>
+		<article>
+			<h2>contacts</h2>
+			<form>
+				<input type="email" name="mail" placeholder="adresse email">
+				<input type="text" name="subject" placeholder="sujet du mail">
+				<textarea placeholder="message"></textarea>
+				<input type="submit" id="btn" value="envoyer">
+			</form>
+			<a href="#">contact</a>
+		</article>
 		<script>
 			window.onscroll = function() {navbarReduction()};
-			var scroll = document.getElementsByClassName("toScroll");
 			var back = document.getElementById("back");
 
 			function navbarReduction() {
 				back.style.top = window.pageYOffset / 2 + 'px';
-				if (window.pageYOffset >= 50)
-					{for (let i of scroll) {i.classList.add("scroll")};}
-				else {for (let i of scroll) {i.classList.remove("scroll")};}
 			}
 		</script>
 	</body>
