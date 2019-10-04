@@ -56,6 +56,7 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
+/*RESET*/
 /*/////////////////////////////////////////////*/
 
 
@@ -77,7 +78,7 @@ h1 {
 }
 h2 {
 	font-size: 2em;
-	margin: 0.6em 0 50px 0;
+	margin: 20px 0 20px 0;
 	color: rgb(213, 163, 138);
 }
 h3 {
@@ -88,21 +89,13 @@ h3 {
 p + h3 {
 	margin-top: 20px;
 }
-h2:after {
-	content: "";
-	position: absolute;
-	top: 0px;
-	left: -8px;
-	height: calc(100% + 40px);
-	width: 3px;
-	background-color: rgb(213, 163, 138);
-}
 p {
 	text-align: left;
 	margin-right: 10px;
 	line-height: 1.5;
 	color: rgb(93, 62, 49);
 }
+/*TEXT STYLE*/
 /*/////////////////////////////////////////////*/
 
 
@@ -133,20 +126,12 @@ header {
 	overflow: hidden;
 }
 
-
-
-
-
 header #back {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	min-width: 100%;
 }
-
-
-
-
 
 header #bande {
 	position: fixed;
@@ -177,6 +162,14 @@ header #bande #logo img {
 	height: 100%;
 	filter: invert(0.8);
 }
+header #bande #logo p {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+header #bande #logo.scroll p {
+	display: none;
+}
 header #bande #menu {
 	position: absolute;
 	top: 50%;
@@ -198,10 +191,6 @@ header #bande #menu a.scroll {
 	width: auto;
 	margin: auto;
 }
-
-
-
-
 
 header #name {
 	position: absolute;
@@ -240,10 +229,6 @@ header #name:after {
 	border: 1px solid rgb(206, 40, 42);
 	width: 50px;
 }
-
-
-
-
 
 header #building {
 	position: absolute;
@@ -286,6 +271,7 @@ header #building h1 {
 	flex-direction: column;
 	margin-bottom: 70px;
 }
+/*
 #page a {
 	position: relative;
 	margin: 20px 0px 0px 0px;
@@ -293,17 +279,17 @@ header #building h1 {
 	background-color: rgba(213, 163, 138, 0.5);
 	font-size: 1em;
 	text-transform: lowercase;
-	padding: 5px 40px;
+	padding: 5px 90px;
 }
 #page a:before {
-	content: "-->";
+	content: "voir dans ";
 	position: absolute;
 	bottom: 5px;
 	left: 10px;
 }
+*/
 #page aside h2 {
 	font-size: 1.5em;
-	margin: 0.9em 0 50px 0;
 }
 #page article img {
 	margin: 30px auto 30px 0px;
