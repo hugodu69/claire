@@ -10,7 +10,26 @@
 	</head>
 	<body>
 		<header id="navbar">
-			<img id="back" src="includes/photos/piano4.jpg" alt="claire">
+			<div id="slider">
+				<div class="slide-box">
+					<img src="includes/photos/piano4.jpg" alt="claire">
+				</div>
+				<div class="slide-box">
+					<img src="includes/photos/piano1.jpg" alt="claire">
+				</div>
+				<div class="slide-box">
+					<img src="includes/photos/piano2.jpg" alt="claire">
+				</div>
+				<div class="slide-box">
+					<img src="includes/photos/piano3.jpg" alt="claire">
+				</div>
+				<div class="slide-box">
+					<img src="includes/photos/piano5.jpg" alt="claire">
+				</div>
+				<div class="slide-box">
+					<img src="includes/photos/piano4.jpg" alt="claire">
+				</div>
+			</div>
 			<div id="bande" class="toScroll">
 				<a id="logo" class="toScroll" href="index.html">
 					<img src="includes/logo.png" alt="logo claire laplace">
@@ -27,6 +46,7 @@
 					<a class="toScroll" href="asides/agenda.html">agenda</a>
 					<a class="toScroll" href="asides/medias.html">vidéo & audio</a>
 					<a class="toScroll" href="asides/photos.html">photos</a>
+					<a class="toScroll" href="asides/projets.html">projets</a>
 <!--			<a class="toScroll" href="asides/contact.html">contact</a>	-->
 				</div>
 			</div>
@@ -71,10 +91,10 @@
 		<script>
 			window.onscroll = function() {navbarReduction()};
 			var scroll = document.getElementsByClassName("toScroll");
-			var back = document.getElementById("back");
+			var slider = document.getElementById("slider");
 
 			function navbarReduction() {
-				back.style.top = window.pageYOffset / 2 + 'px';
+				slider.style.top = window.pageYOffset / 2 + 'px';
 				if (window.pageYOffset >= 50)
 					{for (let i of scroll) {i.classList.add("scroll")};}
 				else {for (let i of scroll) {i.classList.remove("scroll")};}
