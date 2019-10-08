@@ -8,7 +8,6 @@ dark	rgb(44, 28, 19)
 white	#ccc
 */
 
-
 /*/////////////////////////////////////////////*/
 /*GLOBAL VARIABLE*/
 :root {
@@ -16,13 +15,11 @@ white	#ccc
 	--article-title: rgb(170, 53, 49);
 	--article-text-special: rgb(170, 53, 49);
 	--article-text: rgb(93, 62, 49);
+	--header-background: rgb(26, 20, 22);
+	--footer-background: rgb(130, 123, 98);
 }
 /*GLOBAL VARIABLE*/
 /*/////////////////////////////////////////////*/
-
-
-
-
 
 /*/////////////////////////////////////////////*/
 /*RESET*/
@@ -75,33 +72,8 @@ blockquote, q {
 /*RESET*/
 /*/////////////////////////////////////////////*/
 
-
-
-
-
 /*/////////////////////////////////////////////*/
-/*TEXT STYLE*/
-#menu a {
-	text-decoration: none;
-	color: var(--menu-link);
-	font-size: 0.7em;
-	text-transform: uppercase;
-}
-#name p {
-	color: #ccc;
-	font-size: 3em;
-	margin: 0.3em 0;
-	text-align: center;
-	line-height: 1;
-}
-/*TEXT STYLE*/
-/*/////////////////////////////////////////////*/
-
-
-
-
-
-/*/////////////////////////////////////////////*/
+/*BODY*/
 body {
 	display: flex;
 	flex-direction: column;
@@ -109,11 +81,8 @@ body {
 body * {
 	position: relative;
 }
+/*BODY*/
 /*/////////////////////////////////////////////*/
-
-
-
-
 
 /*/////////////////////////////////////////////*/
 /*HEADER*/
@@ -121,15 +90,18 @@ header {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: calc(100vh + 200px);
 	overflow: hidden;
 }
 
 header #back {
 	position: absolute;
 	top: 0px;
-	left: 0px;
+	left: 50%;
+	transform: translatex(-50%);
+	padding-top: 200px;
 	min-width: 100%;
+	background-color: var(--header-background);
 }
 
 header #bande {
@@ -140,36 +112,90 @@ header #bande {
 	display: flex;
 	height: 200px;
 	width: 100%;
-	background-color: rgba(26, 40, 42, 0.6);
-	margin-top: 0px;
+	background-color: var(--header-background);
+/*	margin-top: 0px;*/
 	-webkit-transition: all 0.4s; /*safari*/
-	transition: all 0.4s;
+	transition: all 0.4s;*/
+}
+header #bande > * {
+	margin: auto;
 }
 header #bande.scroll {
 	height: 50px;
-	background-color: rgba(26, 40, 42, 0.9);
 }
-header #bande #logo {
-	height: 100%;
-	margin: auto 10px;
-}
-header #bande #logo.scroll {
+/*HEADER*/
+/*/////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////////*/
+/*LOGO*/
+header #logo {
+	position: relative;
 	height: 80%;
-	margin: auto 10px;
+	margin-left: 10px;
 }
-header #bande #logo img {
+header #logo img {
 	height: 100%;
 	filter: invert(0.8);
 }
-header #bande #logo p {
+header #logo > p {
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
 }
-header #bande #logo.scroll p {
+header #logo.scroll > p {
 	display: none;
 }
-header #bande #menu {
+/*LOGO*/
+/*/////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////////*/
+/*NAME*/
+header #name {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	left: 200px;
+	bottom: 50%;
+	transform: translatey(50%);
+	text-align: center;
+	width: 350px;
+	opacity: 1;
+	-webkit-transition: all 0.4s; /*safari*/
+	transition: all 0.4s;
+}
+header #name p {
+	margin: auto;
+	color: #ccc;
+	font-size: 2.5em;
+	margin: 0.3em 0;
+	text-align: center;
+	line-height: 1;
+}
+header #name.scroll {
+	opacity: 0;
+}
+header #name #piano:before {
+	content: "";
+	position: absolute;
+	bottom: 50%;
+	left: 30px;
+	border: 1px solid rgb(206, 40, 42);
+	width: 40px;
+}
+header #name #piano:after {
+	content: "";
+	position: absolute;
+	bottom: 50%;
+	right: 30px;
+	border: 1px solid rgb(206, 40, 42);
+	width: 40px;
+}
+/*NAME*/
+/*/////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////////*/
+/*MENU*/
+header #menu {
 	position: absolute;
 	top: 50%;
 	right: 50px;
@@ -179,53 +205,26 @@ header #bande #menu {
 	height: 80%;
 	width: 130px;
 }
-header #bande #menu.scroll {
+header #menu.scroll {
 	width: 50%;
 }
-header #bande #menu a {
+header #menu a {
+	text-decoration: none;
+	color: var(--menu-link);
+	font-size: 0.7em;
+	text-transform: uppercase;
 	margin: auto 0px;
 	width: 130px;
 }
-header #bande #menu a.scroll {
+header #menu a.scroll {
 	width: auto;
 	margin: auto;
 }
+/*MENU*/
+/*/////////////////////////////////////////////*/
 
-header #name {
-	position: absolute;
-	top: 70%;
-	left: 10%;
-	text-align: center;
-	opacity: 1;
-	-webkit-transition: all 0.4s; /*safari*/
-	transition: all 0.4s;
-}
-header #name.scroll {
-	opacity: 0;
-}
-header #name p:first-child {
-	text-transform: capitalize;
-}
-header #name p:last-child {
-	text-transform: uppercase;
-}
-header #name:before {
-	content: "";
-	position: absolute;
-	bottom: 38px;
-	left: 10px;
-	border: 1px solid rgb(206, 40, 42);
-	width: 50px;
-}
-header #name:after {
-	content: "";
-	position: absolute;
-	bottom: 38px;
-	right: 10px;
-	border: 1px solid rgb(206, 40, 42);
-	width: 50px;
-}
-
+/*/////////////////////////////////////////////*/
+/*BUILDING PAGE*/
 header #building {
 	position: absolute;
 	top: 300px;
@@ -237,7 +236,7 @@ header #building {
 header #building h1 {
 	color: rgb(93, 62, 49);
 }
-/*HEADER*/
+/*BUILDING PAGE*/
 /*/////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////*/
@@ -262,7 +261,7 @@ header #building h1 {
 /*/////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////*/
-/*MAIN ARTICLE*/
+/*ARTICLE*/
 #page article {
 	display: flex;
 	flex-direction: column;
@@ -290,11 +289,11 @@ header #building h1 {
 	line-height: 1.5;
 	color: var(--article-text);
 }
-/*MAIN ARTICLE*/
+/*ARTICLE*/
 /*/////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////*/
-/*MAIN ASIDE*/
+/*ASIDE*/
 /*
 #page a {
 	position: relative;
@@ -318,11 +317,11 @@ header #building h1 {
 #page article img {
 	margin: 30px auto 30px 0px;
 }
-/*MAIN ASIDE*/
+/*ASIDE*/
 /*/////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////*/
-/*MAIN FORM*/
+/*FORM*/
 #page form {
 	display: flex;
 	flex-direction: column;
@@ -354,12 +353,8 @@ header #building h1 {
 	background-color: rgb(220, 220, 220);
 	border: none;
 }
-/*MAIN FORM*/
+/*FORM*/
 /*/////////////////////////////////////////////*/
-
-
-
-
 
 /*/////////////////////////////////////////////*/
 /*FOOTER*/
@@ -367,6 +362,6 @@ footer {
 	width: 100%;
 	height: 150px;
 	margin-top: 50px;
-	background-color: rgba(213, 163, 138, 0.3);
+	background-color: var(--footer-background);
 }
 /*/////////////////////////////////////////////*/
