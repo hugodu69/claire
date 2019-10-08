@@ -11,12 +11,13 @@ white	#ccc
 /*/////////////////////////////////////////////*/
 /*GLOBAL VARIABLE*/
 :root {
-	--menu-link: #ccc;
+	--menu-link: rgb(174, 174, 174);
 	--article-title: rgb(170, 53, 49);
 	--article-text-special: rgb(170, 53, 49);
 	--article-text: rgb(93, 62, 49);
-	--header-background: rgb(26, 20, 22);
+	--header-background: rgb(255, 255, 255);
 	--footer-background: rgb(130, 123, 98);
+	--separation-line: rgba(93, 62, 49, 0.5);
 }
 /*GLOBAL VARIABLE*/
 /*/////////////////////////////////////////////*/
@@ -90,7 +91,7 @@ header {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: calc(100vh + 200px);
+	height: calc(100vh + 150px);
 	overflow: hidden;
 }
 /*HEADER*/
@@ -104,7 +105,7 @@ header #bande {
 	left: 0px;
 	z-index: 1;
 	display: flex;
-	height: 200px;
+	height: 150px;
 	width: 100%;
 	background-color: var(--header-background);
 /*	margin-top: 0px;*/
@@ -135,6 +136,7 @@ header #logo > p {
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
+	font-size: 0.8em;
 }
 header #logo.scroll > p {
 	display: none;
@@ -226,22 +228,19 @@ header #slider {
 	left: 0px;
 	width: calc(6 * 100vw);
 	height: 100%;
-	padding-top: 200px;
-	background-color: var(--header-background);
+	padding-top: 150px;
 	animation: 15s move-slide infinite;
 }
 @keyframes move-slide {
       0%   {left: 0vw;}
-      15%  {left: 0vw;}
-      20%  {left: -100vw;}
-      35%  {left: -100vw;}
-      40%  {left: -200vw;}
-      55%  {left: -200vw;}
-      60%  {left: -300vw;}
+      16%  {left: 0vw;}
+      25%  {left: -100vw;}
+      41%  {left: -100vw;}
+      50%  {left: -200vw;}
+      66%  {left: -200vw;}
       75%  {left: -300vw;}
-      80%  {left: -400vw;}
-      95%  {left: -400vw;}
-      100% {left: -500vw;}
+      91%  {left: -300vw;}
+      100% {left: -400vw;}
 }
 header .slide-box {
 	margin: auto 0px;
@@ -250,8 +249,7 @@ header .slide-box {
 	overflow: hidden;
 }
 header .slide-box img {
-	min-height: 100%;
-	min-width: 100%;
+	width: 100%;
 }
 /*SLIDER*/
 /*/////////////////////////////////////////////*/
@@ -273,37 +271,60 @@ header #building h1 {
 /*/////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////*/
-/*MAIN*/
+/*PAGE*/
 #page {
 	margin: auto;
 	display: flex;
+	overflow: hidden;
 }
 #page aside {
 	display: flex;
 	flex-direction: column;
 	margin: 0px auto;
 	width: 20%;
+	-webkit-transition: all 0.4s; /*safari*/
+	transition: all 0.4s;
 }
 #page main {
 	display: flex;
 	flex-direction: column;
 	margin: 0px auto;
 	width: 70%;
+	-webkit-transition: all 0.4s; /*safari*/
+	transition: all 0.4s;
 }
-/*MAIN*/
+#page main:before {
+	content: "";
+	position: absolute;
+	top: 20px;
+	left: -30px;
+	height: 100%;
+	width: 1px;
+	background-color: var(--separation-line);
+}
+#page aside:focus {
+	width: 80%;
+	-webkit-transition: all 0.4s; /*safari*/
+	transition: all 0.4s;
+}
+#page aside:focus ~ main {
+	margin-right: -70%;
+	-webkit-transition: all 0.4s; /*safari*/
+	transition: all 0.4s;
+}
+/*PAGE*/
 /*/////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////*/
 /*ARTICLE*/
-#page article {
+.article {
 	display: flex;
 	flex-direction: column;
 	margin-top: 30px;
 	margin-bottom: 40px;
 }
 .article > * {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 10px auto 10px 0px;
 }
 .article-title {
 	font-size: 1.2em;
@@ -318,7 +339,6 @@ header #building h1 {
 }
 .article-text {
 	text-align: left;
-	margin-right: 10px;
 	line-height: 1.5;
 	color: var(--article-text);
 }
@@ -326,31 +346,15 @@ header #building h1 {
 /*/////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////*/
-/*ASIDE*/
-/*
-#page a {
-	position: relative;
-	margin: 20px 0px 0px 0px;
-	color: rgb(93, 62, 49);
-	background-color: rgba(213, 163, 138, 0.5);
-	font-size: 1em;
-	text-transform: lowercase;
-	padding: 5px 90px;
+/*BIO*/
+#bio-text {
+	height: 190px;
+	overflow: hidden;
 }
-#page a:before {
-	content: "voir dans ";
-	position: absolute;
-	bottom: 5px;
-	left: 10px;
+#bio-text-anglais {
+	display: none;
 }
-*/
-#page aside h2 {
-	font-size: 1.5em;
-}
-#page article img {
-	margin: 30px auto 30px 0px;
-}
-/*ASIDE*/
+/*BIO*/
 /*/////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////*/
@@ -358,10 +362,10 @@ header #building h1 {
 #page form {
 	display: flex;
 	flex-direction: column;
+	margin: 0px;
 }
 #page form * {
-	margin: 20px auto 0px 0px;
-	width: 80%;
+	margin: 10px 40px 10px 0px;
 	border: 1px solid rgb(213, 163, 138);
 	height: 20px;
 	padding: 5px;
