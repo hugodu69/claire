@@ -169,6 +169,7 @@ header #name p {
 }
 header #name.scroll {
 	opacity: 0;
+	visibility: hidden;
 }
 header #name #piano:before {
 	content: "";
