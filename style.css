@@ -18,6 +18,7 @@ white	#ccc
 	--header-background: rgb(255, 255, 255);
 	--footer-background: rgb(130, 123, 98);
 	--separation-line: rgba(93, 62, 49, 0.5);
+	--bio-anglais: rgb(153, 122, 109);
 }
 /*GLOBAL VARIABLE*/
 /*/////////////////////////////////////////////*/
@@ -70,6 +71,9 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
+* {
+	cursor: default;
+}
 /*RESET*/
 /*/////////////////////////////////////////////*/
 
@@ -103,7 +107,7 @@ header #bande {
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	z-index: 1;
+	z-index: 2;
 	display: flex;
 	height: 150px;
 	width: 100%;
@@ -278,6 +282,9 @@ header #building h1 {
 	display: flex;
 	overflow: hidden;
 }
+#page a {
+	text-decoration: none;
+}
 #page aside {
 	display: flex;
 	flex-direction: column;
@@ -285,6 +292,13 @@ header #building h1 {
 	width: 20%;
 	-webkit-transition: all 0.4s; /*safari*/
 	transition: all 0.4s;
+}
+#page #close-aside {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
 #page main {
 	display: flex;
@@ -315,6 +329,10 @@ header #building h1 {
 }
 #page aside:focus #bio p {
 	opacity: 1;
+	visibility: visible;
+}
+#page aside:focus #bio {
+	z-index: 0;
 }
 /*PAGE*/
 /*/////////////////////////////////////////////*/
@@ -351,6 +369,9 @@ header #building h1 {
 
 /*/////////////////////////////////////////////*/
 /*BIO*/
+#bio {
+	z-index: 1;
+}
 #bio p {
 	width: 20vw;
 	-webkit-transition: all 0.4s; /*safari*/
@@ -361,18 +382,23 @@ header #building h1 {
 	top: 0px;
 	left: 22vw;
 	opacity: 0;
+	visibility: hidden;
 }
 #bio-anglais-un {
 	position: absolute;
 	top: 0px;
 	left: 44vw;
 	opacity: 0;
+	visibility: hidden;
+	color: var(--bio-anglais);
 }
 #bio-anglais-deux {
 	position: absolute;
 	top: 0px;
 	left: 66vw;
 	opacity: 0;
+	visibility: hidden;
+	color: var(--bio-anglais);
 }
 /*BIO*/
 /*/////////////////////////////////////////////*/
@@ -383,6 +409,8 @@ header #building h1 {
 	display: flex;
 	flex-direction: column;
 	margin: 0px;
+	width: 20vw;
+	background-color: white;
 }
 #page form * {
 	margin: 10px 40px 10px 0px;
@@ -392,6 +420,7 @@ header #building h1 {
 	font-size: 13px;
 	background-color: rgb(250, 250, 250);
 	color: rgb(93, 62, 49);
+	z-index: 1;
 }
 #page form textarea {
 	min-height: 100px;
