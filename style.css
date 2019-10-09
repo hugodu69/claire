@@ -16,8 +16,9 @@ white	#ccc
 	--article-text-special: rgb(170, 53, 49);
 	--article-text: rgb(93, 62, 49);
 	--header-background: rgb(255, 255, 255);
-	--footer-background: rgb(130, 123, 98);
+	--footer-background: rgb(30, 30, 30);
 	--separation-line: rgba(93, 62, 49, 0.5);
+	--footer-separation-line: rgba(123, 123, 123);
 	--bio-anglais: rgb(153, 122, 109);
 }
 /*GLOBAL VARIABLE*/
@@ -451,10 +452,41 @@ footer {
 	margin-top: 50px;
 	background-color: var(--footer-background);
 	display: flex;
+	padding: 20px 0px;
 }
-footer * {
+footer .footer-column {
+	display: flex;
 	margin: auto;
-	height: 50px;
+	height: 100%;
+	width: 100%;
+}
+footer #footer-align {
+	display: flex;
+	flex-direction: column;
+	margin: 0px auto;
+}
+footer .footer-reseau {
+	display: flex;
+	margin: auto;
+	margin-left: 0px;
+	text-decoration: none;
+	cursor: pointer;
+}
+footer .footer-reseau p {
+	margin: auto 10px;
+	color: var(--menu-link);
+	font-size: 0.7em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+footer .footer-reseau img {
+	margin: auto;
+	width: 30px;
+	cursor: pointer;
+}
+footer #footer-middle {
+	border-left: 1px solid var(--footer-separation-line);
+	border-right: 1px solid var(--footer-separation-line);
 }
 /*FOOTER*/
 /*/////////////////////////////////////////////*/
