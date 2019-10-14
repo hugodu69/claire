@@ -10,20 +10,87 @@
 	<body>
 		<header id="navbar">
 			<div id="bande" class="toScroll">
-				<a id="logo" class="toScroll" href="index.html"><img src="includes/logo.png" alt="logo claire laplace"></a>
+				<a id="logo" class="toScroll" href="index.html">
+					<img src="includes/logo.png" alt="logo claire laplace">
+					<p>v.10</p>
+					<div id="name" class="toScroll">
+						<p>Claire Laplace</p>
+						<p id="piano">PIANO</p>
+					</div>
+				</a>
 				<div id="menu" class="toScroll">
 					<a class="toScroll" href="asides/actualites.html">actualités</a>
-					<a class="toScroll" href="asides/bio.html">bio</a>
 					<a class="toScroll" href="asides/saison.html">saison</a>
 					<a class="toScroll" href="asides/agenda.html">agenda</a>
 					<a class="toScroll" href="asides/medias.html">vidéo & audio</a>
 					<a class="toScroll" href="asides/photos.html">photos</a>
-					<a class="toScroll" href="asides/contact.html">contact</a>
+					<a class="toScroll" href="asides/projets.html">projets</a>
 				</div>
 			</div>
-			<div id="building">
-				<h1>en construction</h1>
-		</div>
 		</header>
+		<div id="page">
+			<div id="actualite">
+				<div class="onglet-title">
+					<p>prochains concerts et evenements</p>
+				</div>
+				<article class="article">
+					<h1 class="article-title">19 octobre</h1>
+					<p class="article-text-special">récital Montgeroult - Château Montgeroult, Oise</p>
+				</article>
+				<article class="article">
+					<h1 class="article-title">25 octobre</h1>
+					<p class="article-text-special">récital-conférence Montgeroult, Museo del pianoforte Antico, Ala, Italie</p>
+				</article>
+				<article class="article">
+					<h1 class="article-title">4, 18 novembre</h1>
+					<p class="article-text-special">concerts Montgeroult, pour l’association VSArt, Lyon</p>
+				</article>
+				<article class="article">
+					<h1 class="article-title">23 décembre</h1>
+					<p class="article-text-special">concert Montgeroult, pour l’association PianoThé, Lyon</p>
+				</article>
+				<article class="article">
+					<h1 class="article-title">16 janvier</h1>
+					<p class="article-text-special">présentation d’oeuvre - sonate op.110 beethoven, mozarteum de lyon</p>
+				</article>
+			</div>
+		</div>
+		<footer>
+			<div class="footer-column">
+				<div id="footer-align">
+					<a class="footer-reseau" href="index.html#">
+						<img src="./includes/logo_medias/facebook.png" alt="liens vers facebook">
+						<p>facebook</p>
+					</a>
+					<a class="footer-reseau" href="index.html#">
+						<img src="./includes/logo_medias/instagram.png" alt="liens vers instagram">
+						<p>instagram</p>
+					</a>
+					<a class="footer-reseau" href="index.html#">
+						<img src="./includes/logo_medias/snapchat.png" alt="liens vers snaptchat">
+						<p>snaptchat</p>
+					</a>
+					<a class="footer-reseau" href="index.html#">
+						<img src="./includes/logo_medias/youtube.png" alt="liens vers youtube">
+						<p>youtube</p>
+					</a>
+				</div>
+			</div>
+			<div class="footer-column" id="footer-middle">
+			</div>
+			<div class="footer-column">
+			</div>
+		</footer>
+		<script>
+			window.onscroll = function() {navbarReduction()};
+			var scroll = document.getElementsByClassName("toScroll");
+			var slider = document.getElementById("slider");
+
+			function navbarReduction() {
+				if (window.pageYOffset >= 50)
+					{for (let i of scroll) {i.classList.add("scroll")};}
+				else {for (let i of scroll) {i.classList.remove("scroll")};}
+			}
+		</script>
 	</body>
 </html>
