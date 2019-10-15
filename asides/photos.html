@@ -10,20 +10,72 @@
 	<body>
 		<header id="navbar">
 			<div id="bande" class="toScroll">
-				<a id="logo" class="toScroll" href="index.html"><img src="includes/logo.png" alt="logo claire laplace"></a>
+				<a id="logo" class="toScroll" href="index.html">
+					<img src="includes/logo.png" alt="logo claire laplace">
+					<p>v.10</p>
+					<div id="name" class="toScroll">
+						<p>Claire Laplace</p>
+						<p id="piano">PIANO</p>
+					</div>
+				</a>
 				<div id="menu" class="toScroll">
 					<a class="toScroll" href="asides/actualites.html">actualités</a>
-					<a class="toScroll" href="asides/bio.html">bio</a>
-					<a class="toScroll" href="asides/saison.html">saison</a>
-					<a class="toScroll" href="asides/agenda.html">agenda</a>
 					<a class="toScroll" href="asides/medias.html">vidéo & audio</a>
 					<a class="toScroll" href="asides/photos.html">photos</a>
-					<a class="toScroll" href="asides/contact.html">contact</a>
+					<a class="toScroll" href="asides/projets.html">projets</a>
 				</div>
 			</div>
-			<div id="building">
-				<h1>en construction</h1>
-		</div>
 		</header>
+		<div id="page">
+			<div class="onglet" id="photos">
+				<div class="onglet-title">
+					<p>photos de claire laplace</p>
+				</div>
+				<img src="includes/photos/piano1.jpg" alt="claire au piano">
+				<img src="includes/photos/piano2.jpg" alt="claire au piano">
+				<img src="includes/photos/piano3.jpg" alt="claire au piano">
+				<img src="includes/photos/piano4.jpg" alt="claire au piano">
+				<img src="includes/photos/piano5.jpg" alt="claire au piano">
+				<img src="includes/photos/piano6.jpg" alt="claire au piano">
+				<img src="includes/photos/piano7.jpg" alt="claire au piano">
+			</div>
+		</div>
+		<footer>
+			<div class="footer-column">
+				<div id="footer-align">
+					<a class="footer-reseau" href="index.html#">
+						<img src="./includes/logo_medias/facebook.png" alt="liens vers facebook">
+						<p>facebook</p>
+					</a>
+					<a class="footer-reseau" href="index.html#">
+						<img src="./includes/logo_medias/instagram.png" alt="liens vers instagram">
+						<p>instagram</p>
+					</a>
+					<a class="footer-reseau" href="index.html#">
+						<img src="./includes/logo_medias/snapchat.png" alt="liens vers snaptchat">
+						<p>snaptchat</p>
+					</a>
+					<a class="footer-reseau" href="index.html#">
+						<img src="./includes/logo_medias/youtube.png" alt="liens vers youtube">
+						<p>youtube</p>
+					</a>
+				</div>
+			</div>
+			<div class="footer-column" id="footer-middle">
+			</div>
+			<div class="footer-column">
+			</div>
+		</footer>
+		<script>
+			window.onscroll = function() {navbarReduction()};
+			var scroll = document.getElementsByClassName("toScroll");
+			var slider = document.getElementById("slider");
+
+			function navbarReduction() {
+				if (window.pageYOffset >= 50)
+					{for (let i of scroll) {i.classList.add("scroll")};}
+				else {for (let i of scroll) {i.classList.remove("scroll")};}
+			}
+		</script>
 	</body>
 </html>
