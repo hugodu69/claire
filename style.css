@@ -319,6 +319,10 @@ header #menu a.scroll {
 	-webkit-transition: all 0.4s; /*safari*/
 	transition: all 0.4s;
 }
+#page aside:focus #text-anglais {
+	opacity: 1;
+	display: block;
+}
 #page aside:focus #bio p {
 	opacity: 1;
 	visibility: visible;
@@ -403,6 +407,14 @@ header #menu a.scroll {
 	-webkit-transition: all 0.4s; /*safari*/
 	transition: all 0.4s;
 }
+#bio #text-anglais {
+	margin-top: 50px;
+	opacity: 0;
+	display: none;
+}
+#bio #text-anglais p {
+	color: var(--bio-anglais);
+}
 #bio-francais-deux {
 	position: absolute;
 	top: 0px;
@@ -416,7 +428,6 @@ header #menu a.scroll {
 	left: 44vw;
 	opacity: 0;
 	visibility: hidden;
-	color: var(--bio-anglais);
 }
 #bio-anglais-deux {
 	position: absolute;
@@ -424,7 +435,6 @@ header #menu a.scroll {
 	left: 66vw;
 	opacity: 0;
 	visibility: hidden;
-	color: var(--bio-anglais);
 }
 /*BIO*/
 /*/////////////////////////////////////////////*/
@@ -470,9 +480,24 @@ header #menu a.scroll {
 
 /*/////////////////////////////////////////////*/
 /*PHOTOS*/
-.onglet#photos img {
-	width: 50vw;
-	margin: 30px auto 30px 0px;
+.onglet#photos * {
+	cursor: default;
+}
+.onglet#photos .article {
+	width: calc(100vw - 50px);
+}
+.onglet#photos .article .photo-album {
+	display: grid;
+	grid-gap: 1vw;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-template-rows: 1fr;
+	width: 100%;
+}
+.onglet#photos .article .photo-album .image-box img {
+	object-fit: cover;
+	width: 100%;
+	height: 200px;
+	cursor: pointer;
 }
 /*PHOTOS*/
 /*/////////////////////////////////////////////*/
