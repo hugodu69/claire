@@ -486,18 +486,41 @@ header #menu a.scroll {
 .onglet#photos .article {
 	width: calc(100vw - 50px);
 }
-.onglet#photos .article .photo-album {
+.onglet#photos .photo-album {
 	display: grid;
 	grid-gap: 1vw;
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	grid-template-rows: 1fr;
 	width: 100%;
 }
-.onglet#photos .article .photo-album .image-box img {
+.onglet#photos .image-box .mini-photo {
 	object-fit: cover;
 	width: 100%;
 	height: 200px;
 	cursor: pointer;
+}
+.onglet#photos .image-box .zoom-box {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	background-color: rgba(150, 150, 150, 0.8);
+	display: none;
+	opacity: 0;
+	-webkit-transition: all 0.4s; /*safari*/
+	transition: all 0.4s;
+}
+.onglet#photos .image-box .zoom-photo {
+	margin: auto;
+	object-fit: contain;
+	width: 90%;
+	height: 90%;
+}
+.onglet#photos .image-box .mini-photo:focus ~ .zoom-box {
+	display: flex;
+	opacity: 1;
 }
 /*PHOTOS*/
 /*/////////////////////////////////////////////*/
