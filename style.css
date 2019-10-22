@@ -112,7 +112,7 @@ header #slider {
 	position: relative;
 	width: calc(6 * 100vw);
 	height: 100vh;
-	animation: 15s move-slide infinite;
+	animation: 20s move-slide infinite;
 }
 @keyframes move-slide {
       0%   {left: 0vw;}
@@ -557,7 +557,7 @@ footer #footer-align .footer-reseau {
 	text-decoration: none;
 	cursor: pointer;
 }
-footer .footer-reseau p {
+footer #footer-align p {
 	margin: auto 10px;
 	font-size: 0.7em;
 	text-transform: uppercase;
@@ -568,8 +568,7 @@ footer .footer-reseau img {
 	width: 20px;
 	cursor: pointer;
 }
-footer #footer-middle {
-	border-left: 1px solid var(--footer-separation-line);
+footer .footer-column:first-child {
 	border-right: 1px solid var(--footer-separation-line);
 }
 /*FOOTER*/
