@@ -19,7 +19,7 @@ white	#ccc
 	--header-background: 			rgb(255, 255, 255);
 	--footer-background: 			rgb(30,  30,  30);
 	--separation-line: 				rgb(93,  62,  49);
-	--footer-separation-line: rgb(123, 123, 123);
+	--footer-separation-line: rgb(160, 160, 160);
 	--bio-anglais: 						rgb(153, 122, 109);
 	--form-background: 				rgb(245, 245, 245);
 	--page-background: 				rgb(250, 250, 250);
@@ -530,9 +530,12 @@ header #menu a.scroll {
 footer {
 	width: 100%;
 	height: 150px;
-	background-color: var(--footer-background);
 	display: flex;
 	padding: 20px 0px;
+	border-top: 1px solid var(--footer-separation-line);
+}
+footer * {
+	color: var(--menu-link);
 }
 footer .footer-column {
 	display: flex;
@@ -545,16 +548,17 @@ footer #footer-align {
 	flex-direction: column;
 	margin: 0px auto;
 }
-footer .footer-reseau {
-	display: flex;
+footer #footer-align > * {
 	margin: auto;
 	margin-left: 0px;
+}
+footer #footer-align .footer-reseau {
+	display: flex;
 	text-decoration: none;
 	cursor: pointer;
 }
 footer .footer-reseau p {
 	margin: auto 10px;
-	color: var(--menu-link);
 	font-size: 0.7em;
 	text-transform: uppercase;
 	cursor: pointer;
