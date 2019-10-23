@@ -30,6 +30,9 @@ white	#ccc
 
 /*/////////////////////////////////////////////*/
 /*RESET*/
+* {
+	display: block;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,7 +51,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-family: inherit;
 	vertical-align: baseline;
 }
-/* remember to define focus styles! */
 :focus {
 	outline: 0;
 }
@@ -150,9 +152,7 @@ header #bande {
 	height: 150px;
 	width: 100%;
 	background-color: var(--header-background);
-/*	margin-top: 0px;*/
-	-webkit-transition: all 0.4s; /*safari*/
-	transition: all 0.4s;*/
+	transition: all 0.4s;
 }
 header #bande > * {
 	margin: auto;
@@ -268,25 +268,31 @@ header #menu a.scroll {
 
 /*/////////////////////////////////////////////*/
 /*PAGE*/
+#page a {
+	text-decoration: none;
+}
 #page {
+	display: block;
 	margin: 0px;
-	padding-bottom: 50px;
-	display: flex;
+	padding: 50px 0px;
 	overflow: hidden;
 	min-height: 100vh;
 	background-color: var(--page-background);
+	overflow: visible;
+	border: 1px solid green;
 }
-#page a {
-	text-decoration: none;
+#page #tiroir {
+	display: flex;
+	width: calc(200vw - 240px);
 }
 #page aside {
 	display: flex;
 	flex-direction: column;
-	margin: 0px 3%;
-	width: 20%;
-	-webkit-transition: all 0.4s; /*safari*/
+	margin: 0px;
+	padding: 0px 3vw;
 	transition: all 0.4s;
 }
+/*
 #page #close-aside {
 	position: absolute;
 	top: 0px;
@@ -294,13 +300,15 @@ header #menu a.scroll {
 	width: 100%;
 	height: 100%;
 }
+*/
 #page main {
 	display: flex;
 	flex-direction: column;
-	margin: 0px 3%;
-	-webkit-transition: all 0.4s; /*safari*/
+	margin: 0px;
+	padding: 0px 3vw;
 	transition: all 0.4s;
 }
+/*
 #page main:before {
 	content: "";
 	display: none;
@@ -311,14 +319,14 @@ header #menu a.scroll {
 	width: 1px;
 	background-color: var(--separation-line);
 }
+*/
+/*
 #page aside:focus {
 	width: 90vw;
-	-webkit-transition: all 0.4s; /*safari*/
 	transition: all 0.4s;
 }
 #page aside:focus ~ main {
-	margin-left: 100%;
-	-webkit-transition: all 0.4s; /*safari*/
+	margin-left: calc(100vw - 250px);
 	transition: all 0.4s;
 }
 #page aside:focus #text-anglais {
@@ -329,9 +337,7 @@ header #menu a.scroll {
 	opacity: 1;
 	visibility: visible;
 }
-#page aside:focus #bio {
-	z-index: 0;
-}
+*/
 /*PAGE*/
 /*/////////////////////////////////////////////*/
 
@@ -399,44 +405,47 @@ header #menu a.scroll {
 /*/////////////////////////////////////////////*/
 /*BIO*/
 #bio {
-	z-index: 1;
-}
-#bio p {
-/*	font-size: 0.8em;
-	text-align: justify;
-	text-justify: inter-word;	*/
 	width: 240px;
-	-webkit-transition: all 0.4s; /*safari*/
+	height: 350px;
+	overflow: hidden;
+	overflow: visible;
 	transition: all 0.4s;
 }
+#bio:focus {
+	width: 90vw;
+	height: 100%;
+}
+#bio #bio-big {
+	margin-left: 0px;
+	width: 90vw;
+}
+#bio .bio-text {
+	columns: 240px 4;
+	column-gap: 40px;
+}
 #bio #text-anglais {
-	margin-top: 50px;
-	opacity: 0;
-	display: none;
+	margin-top: 30px;
 }
 #bio #text-anglais p {
 	color: var(--bio-anglais);
 }
-#bio-francais-deux {
-	position: absolute;
-	top: 0px;
-	left: 22vw;
-	opacity: 0;
-	visibility: hidden;
+#bio .fadeout {
+    position: absolute; 
+    bottom: 0em;
+    width:100%;
+    height: 60px;
+    background: linear-gradient(
+        rgba(250, 250, 250, 0) 0%,
+        rgba(250, 250, 250, 1) 100%
+    );
 }
-#bio-anglais-un {
+#bio #close-bio {
+	border: 1px solid red;
 	position: absolute;
 	top: 0px;
-	left: 44vw;
-	opacity: 0;
-	visibility: hidden;
-}
-#bio-anglais-deux {
-	position: absolute;
-	top: 0px;
-	left: 66vw;
-	opacity: 0;
-	visibility: hidden;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
 /*BIO*/
 /*/////////////////////////////////////////////*/
