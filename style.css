@@ -23,6 +23,7 @@ white	#ccc
 	--bio-anglais: 						rgb(153, 122, 109);
 	--form-background: 				rgb(245, 245, 245);
 	--page-background: 				rgb(250, 250, 250);
+	--btn-focus: 							rgb(220, 220, 220);
 }
 /*GLOBAL VARIABLE*/
 /*/////////////////////////////////////////////*/
@@ -116,13 +117,13 @@ header #slider {
 }
 @keyframes move-slide {
       0%   {left: 0vw;}
-      16%  {left: 0vw;}
+      15%  {left: 0vw;}
       25%  {left: -100vw;}
-      41%  {left: -100vw;}
+      40%  {left: -100vw;}
       50%  {left: -200vw;}
-      66%  {left: -200vw;}
+      65%  {left: -200vw;}
       75%  {left: -300vw;}
-      91%  {left: -300vw;}
+      90%  {left: -300vw;}
       100% {left: -400vw;}
 }
 header .slide-box {
@@ -463,17 +464,39 @@ header #menu a.scroll {
 	resize: vertical;
 }
 #page form #btn {
-	background-color: white;
+	background-color: var(--background-color);
 	margin-left: 0px;
 	margin-right: auto;
 	width: 90px;
-	height: 30px;
+	height: 20px;
 	cursor: pointer;
 	color: rgb(213, 163, 138);
 }
 #page form #btn:hover {
-	background-color: rgb(220, 220, 220);
+	background-color: var(--btn-focus);
+	border: 1px solid var(--btn-focus);
+}
+#page .message {
+	display: none;
+	position: absolute;
+	top: -70px;
+	left: -20px;
+	width: 100%;
+	height: calc(100% + 60px);
 	border: none;
+	background-color: rgba(250, 250, 250, 0.8);
+	z-index: 1;
+}
+#page .message p {
+	display: flex;
+	margin: auto;
+	border: none;
+	background-color: transparent;
+	font-size: 1.5em;
+	height: auto;
+}
+#page form *:focus ~ .message {
+	display: flex;
 }
 /*FORM*/
 /*/////////////////////////////////////////////*/
@@ -561,6 +584,8 @@ footer #footer-align p {
 	margin: auto 10px;
 	font-size: 0.7em;
 	text-transform: uppercase;
+}
+footer #footer-align a p {
 	cursor: pointer;
 }
 footer .footer-reseau img {
@@ -570,6 +595,29 @@ footer .footer-reseau img {
 }
 footer .footer-column:first-child {
 	border-right: 1px solid var(--footer-separation-line);
+}
+footer .message {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 1;
+}
+footer .message p {
+	display: flex;
+	margin: auto;
+	border: none;
+	background-color: transparent;
+	font-size: 1.5em;
+	height: auto;
+	color: var(--article-text);
+}
+footer a:focus ~ .message {
+	display: flex;
 }
 /*FOOTER*/
 /*/////////////////////////////////////////////*/
