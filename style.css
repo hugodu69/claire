@@ -30,7 +30,7 @@ white	#ccc
 
 /*/////////////////////////////////////////////*/
 /*RESET*/
-* {
+*:not(script) {
 	display: block;
 }
 html, body, div, span, applet, object, iframe,
