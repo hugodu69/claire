@@ -278,8 +278,6 @@ header #menu a.scroll {
 	overflow: hidden;
 	min-height: 100vh;
 	background-color: var(--page-background);
-	overflow: visible;
-	border: 1px solid green;
 }
 #page #tiroir {
 	display: flex;
@@ -292,15 +290,6 @@ header #menu a.scroll {
 	padding: 0px 3vw;
 	transition: all 0.4s;
 }
-/*
-#page #close-aside {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-}
-*/
 #page main {
 	display: flex;
 	flex-direction: column;
@@ -318,24 +307,6 @@ header #menu a.scroll {
 	height: 100%;
 	width: 1px;
 	background-color: var(--separation-line);
-}
-*/
-/*
-#page aside:focus {
-	width: 90vw;
-	transition: all 0.4s;
-}
-#page aside:focus ~ main {
-	margin-left: calc(100vw - 250px);
-	transition: all 0.4s;
-}
-#page aside:focus #text-anglais {
-	opacity: 1;
-	display: block;
-}
-#page aside:focus #bio p {
-	opacity: 1;
-	visibility: visible;
 }
 */
 /*PAGE*/
@@ -408,7 +379,7 @@ header #menu a.scroll {
 	width: 240px;
 	height: 350px;
 	overflow: hidden;
-	overflow: visible;
+	position: relative;
 	transition: all 0.4s;
 }
 #bio:focus {
@@ -439,13 +410,16 @@ header #menu a.scroll {
         rgba(250, 250, 250, 1) 100%
     );
 }
-#bio #close-bio {
-	border: 1px solid red;
+#bio:focus ~ #close-bio {
+	visibility: visible;
+}
+aside #close-bio {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	height: 100%;
+	visibility: hidden;
 }
 /*BIO*/
 /*/////////////////////////////////////////////*/
