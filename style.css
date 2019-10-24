@@ -272,7 +272,7 @@ header #menu a.scroll {
 	text-decoration: none;
 }
 #page {
-	display: block;
+	display: flex;
 	margin: 0px;
 	padding: 50px 0px;
 	overflow: hidden;
@@ -370,6 +370,21 @@ header #menu a.scroll {
 	line-height: 1.5;
 	color: var(--article-text);
 }
+.article .video-container {
+	position: relative;
+	padding-bottom: 55%;
+	height: 0px;
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid red;
+}
+.article .video-container .video {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
 /*ARTICLE*/
 /*/////////////////////////////////////////////*/
 
@@ -382,6 +397,32 @@ header #menu a.scroll {
 	position: relative;
 	transition: all 0.4s;
 }
+#bio:before {
+		content: "";
+    position: absolute; 
+    bottom: 0px;
+		left: 0px;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(
+        rgba(250, 250, 250, 0) 0%,
+        rgba(250, 250, 250, 1) 100%
+    );
+		z-index: 1;
+}
+#bio:after {
+		content: "";
+    position: absolute; 
+		bottom: 0px;
+    right: 0px;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(
+				to right,
+        rgba(250, 250, 250, 0) 0%,
+        rgba(250, 250, 250, 1) 100%
+    );
+}
 #bio:focus {
 	width: 90vw;
 	height: 100%;
@@ -391,24 +432,14 @@ header #menu a.scroll {
 	width: 90vw;
 }
 #bio .bio-text {
-	columns: 240px 4;
+	columns: 260px 4;
 	column-gap: 40px;
 }
 #bio #text-anglais {
 	margin-top: 30px;
 }
-#bio #text-anglais p {
+#bio #text-anglais {
 	color: var(--bio-anglais);
-}
-#bio .fadeout {
-    position: absolute; 
-    bottom: 0em;
-    width:100%;
-    height: 60px;
-    background: linear-gradient(
-        rgba(250, 250, 250, 0) 0%,
-        rgba(250, 250, 250, 1) 100%
-    );
 }
 #bio:focus ~ #close-bio {
 	visibility: visible;
@@ -430,10 +461,10 @@ aside #close-bio {
 	display: flex;
 	flex-direction: column;
 	margin: 0px;
-	width: 20vw;
+	width: 240px;
 }
 #page form * {
-	margin: 10px 40px 10px 0px;
+	margin: 10px 0px;
 	border: 1px solid rgb(213, 163, 138);
 	height: 20px;
 	padding: 5px;
