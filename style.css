@@ -295,6 +295,8 @@ header #menu a.scroll {
 	flex-direction: column;
 	margin: 0px;
 	padding: 0px 3vw;
+	width: 50vw;
+	max-width: 600px;
 	transition: all 0.4s;
 }
 /*
@@ -376,7 +378,6 @@ header #menu a.scroll {
 	height: 0px;
 	width: 100%;
 	overflow: hidden;
-	border: 1px solid red;
 }
 .article .video-container .video {
 	position: absolute;
