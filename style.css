@@ -485,6 +485,7 @@ aside #close-bio {
 /*/////////////////////////////////////////////*/
 /*FORM*/
 #page form {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin: 0px;
@@ -521,10 +522,12 @@ aside #close-bio {
 #page .message {
 	display: none;
 	position: absolute;
-	top: -70px;
-	left: -20px;
+	top: -50px;
+	left: 0px;
 	width: 100%;
-	height: calc(100% + 60px);
+	height: calc(100% + 50px);
+	margin: 0px;
+	padding: 0px;
 	border: none;
 	background-color: rgba(250, 250, 250, 0.8);
 	z-index: 1;
