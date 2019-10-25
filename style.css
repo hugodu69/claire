@@ -193,13 +193,13 @@ header #logo.scroll > p {
 /*NAME*/
 header #name {
 	position: absolute;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	left: 200px;
 	bottom: 50%;
 	transform: translatey(50%);
 	text-align: center;
-	width: 350px;
+	width: 300px;
 	opacity: 1;
 	-webkit-transition: all 0.4s; /*safari*/
 	transition: all 0.4s;
@@ -232,6 +232,11 @@ header #name #piano:after {
 	border: 1px solid rgb(206, 40, 42);
 	width: 40px;
 }
+@media only screen and (min-width: 800px) {
+	header #name {
+		display: flex;
+	}
+}
 /*NAME*/
 /*/////////////////////////////////////////////*/
 
@@ -240,28 +245,37 @@ header #name #piano:after {
 header #menu {
 	position: absolute;
 	top: 50%;
-	right: 50px;
+	right: 3%;
 	display: flex;
 	flex-wrap: wrap;
 	transform: translatey(-50%);
 	height: 80%;
 	width: 130px;
 }
-header #menu.scroll {
-	width: 50%;
-}
 header #menu a {
 	text-decoration: none;
 	color: var(--menu-link);
 	font-size: 0.7em;
 	text-transform: uppercase;
+	text-align: right;
 	margin: auto 0px;
 	width: 130px;
 	cursor: pointer;
 }
-header #menu a.scroll {
-	width: auto;
-	margin: auto;
+@media only screen and (min-width: 800px) {
+	header #menu a {
+		text-align: left;
+	}
+	header #menu {
+		right: 50px;
+	}
+	header #menu.scroll {
+		width: 50%;
+	}
+	header #menu a.scroll {
+		width: auto;
+		margin: auto;
+	}
 }
 /*MENU*/
 /*/////////////////////////////////////////////*/
