@@ -442,7 +442,6 @@ header #menu a.scroll {
   );
 }
 #bio:focus {
-	width: 94vw;
 	height: 100%;
 }
 #bio #bio-big {
@@ -477,6 +476,9 @@ aside #close-bio {
 	}
 	#bio #bio-big {
 		width: 90vw;
+	}
+	#bio:focus {
+		width: 94vw;
 	}
 }
 /*BIO*/
